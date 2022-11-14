@@ -1,1 +1,1 @@
-# purria_api
+<b> drf api for farming simulation <b>
