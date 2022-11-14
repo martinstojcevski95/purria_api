@@ -7,7 +7,7 @@ class GardenSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Garden
-        fields = ['id','garden_contract_id']
+        fields = ['id','name']
         
         
 class ContractSerializer(serializers.ModelSerializer):
@@ -33,5 +33,5 @@ class ContractSerializer(serializers.ModelSerializer):
 
     
     def garden_extra_info(self,obj):
-        return obj.garden.all().values('garden_contract_id','garden','id')
+        return obj.garden.all().values('name','garden','id')
     

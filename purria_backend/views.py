@@ -9,8 +9,7 @@ from rest_framework.authentication import SessionAuthentication, TokenAuthentica
 
 # Create your views here.
 
-class ContractListCreateView(generics.ListCreateAPIView
-):
+class ContractModelViewSet(viewsets.ModelViewSet):
 
     """ a view for creating and listing contractss """
     serializer_class = ContractSerializer
@@ -25,7 +24,7 @@ class ContractListCreateView(generics.ListCreateAPIView
         user = self.request.user
         contract =serializer.save(user=user)
         for i in range(contract.level * 10):
-            newgarden = Garden.objects.create(garden_contract_id=contract.id)
+            newgarden = Garden.objects.create(name=contract.name)
             contract.garden.add(newgarden) 
         return super().perform_create(serializer)
     

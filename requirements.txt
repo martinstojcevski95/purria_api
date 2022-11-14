@@ -13,9 +13,12 @@ model-bakery==1.9.0
 nodeenv==1.7.0
 platformdirs==2.5.3
 pre-commit==2.20.0
+psycopg==3.1.4
+psycopg2-binary==2.9.5
 PyJWT==2.5.0
 pytz==2022.4
 PyYAML==6.0
 sqlparse==0.4.3
 toml==0.10.2
+typing_extensions==4.4.0
 virtualenv==20.16.6
