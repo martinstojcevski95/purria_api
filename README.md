@@ -1,4 +1,4 @@
-<b> drf api for farming simulation <b>
+<b> Restful Api For Purria - farming simulation <b>
   
     only local host for now 
 
